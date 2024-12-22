@@ -14,5 +14,26 @@ def knapsack(weights, values, capacity):
                 dp[i][w] = dp[i - 1][w]
 
     return dp[n][capacity]
+  
+# Penggunaan contoh
+if name == "main":
+    print("="*50)
+    print("  Selamat datang di Penyelesaian Masalah 0/1 Knapsack  ")
+    print("="*50)
+    
+    # Input: berat barang, nilai barang, dan kapasitas knapsack
+    print("\nSilakan masukkan data berikut:")
+    weights = list(map(int, input("Masukkan berat barang (pisahkan dengan koma): ").split(',')))
+    values = list(map(int, input("Masukkan nilai barang (pisahkan dengan koma): ").split(',')))
+    capacity = int(input("Masukkan kapasitas knapsack: "))
+
+    print("\nProses sedang berlangsung...\n")
+    
+    # Menghitung nilai maksimum
+    max_value = knapsack(weights, values, capacity)
+
+    print("="*50)
+    print(f"Nilai maksimum yang dapat dicapai: {max_value}")
+    print("="*50)
 
 
